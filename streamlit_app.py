@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 PASSWORD = os.getenv("PASSWORD")
 
+streamlit_analytics.track(unsafe_password="test123")
 streamlit_analytics.start_tracking()
 
 # Set the title and favicon that appear in the Browser's tab bar.
@@ -157,4 +158,4 @@ for i, country in enumerate(selected_countries):
             delta=growth,
             delta_color=delta_color
         )
-streamlit_analytics.stop_tracking(unsafe_password="123")
+streamlit_analytics.stop_tracking()
