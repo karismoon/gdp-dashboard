@@ -157,4 +157,4 @@ for i, country in enumerate(selected_countries):
             delta=growth,
             delta_color=delta_color
         )
-streamlit_analytics.stop_tracking(unsafe_password=PASSWORD)
+streamlit_analytics.stop_tracking(unsafe_password="123")
