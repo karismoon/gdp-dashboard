@@ -2,8 +2,14 @@ import streamlit as st
 import streamlit_analytics
 import pandas as pd
 import math
+import os
 from pathlib import Path
+from dotenv import load_dotenv
 
+load_dotenv()
+PASSWORD = os.getenv("PASSWORD")
+
+streamlit_analytics.track(PASSWORD)
 streamlit_analytics.start_tracking()
 
 # Set the title and favicon that appear in the Browser's tab bar.
